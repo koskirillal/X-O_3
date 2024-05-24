@@ -7,6 +7,9 @@
     <color name="lightblue">#00FFFF</color>
     <color name="lightpink">#F876F1</color>
     <color name="lightred">#FF4141</color>
+    <color name="darkblue">#092791</color>
+    <color name="darkred">#770202</color>
+    <color name="darkredgrey">#64656C</color>
 
 
 </resources>

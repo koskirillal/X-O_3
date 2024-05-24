@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NickNamesSetUp"
-    android:background="#E0E0E0"
+    android:background="@color/white"
     >
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="99dp"
-        android:layout_height="40dp"
+        android:layout_width="178dp"
+        android:layout_height="36dp"
         android:layout_marginTop="104dp"
-        android:text="TextView"
+        android:text="Enter NickNames "
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -29,7 +29,7 @@
         android:text="FirstPlayer"
 
         android:textAlignment="viewStart"
-        android:textColor="@color/black"
+        android:textColor="@color/red"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextText"
         app:layout_constraintStart_toStartOf="@+id/editTextText" />
@@ -39,7 +39,7 @@
         android:layout_width="127dp"
         android:layout_height="27dp"
         android:text="SecondPlayer"
-        android:textColor="@color/black"
+        android:textColor="@color/blue"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextText2"
         app:layout_constraintStart_toStartOf="@+id/editTextText2" />
@@ -53,6 +53,7 @@
         android:inputType="text"
         android:textColor="@color/black"
         android:text=""
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,6 +68,7 @@
         android:inputType="text"
         android:text=""
         android:textColor="@color/black"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,14 +76,14 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="124dp"
-        android:layout_height="52dp"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
         android:layout_marginTop="132dp"
-        android:background="@drawable/blue_button"
+        android:background="@drawable/continuebutton"
 
         android:onClick="NameButtonsClicktoMainGameDisplay"
-        android:text="Button"
-        android:textColor="@color/white"
+        android:text=""
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

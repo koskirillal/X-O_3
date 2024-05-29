@@ -10,13 +10,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:screenOrientation="portrait"
         android:theme="@style/Theme.Krestnull3"
         tools:targetApi="31">
         <activity
             android:name=".DataHistory"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".GameMainScreen"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".ui.theme.GameMainDisplay"

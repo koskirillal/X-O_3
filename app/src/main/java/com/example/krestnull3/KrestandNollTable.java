@@ -6,6 +6,8 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Build;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -198,6 +200,7 @@ public class KrestandNollTable extends View {
         game.setNickNames(arrnames);
         game.historyButton=HistoryButton;
     }
+
 
 
 }

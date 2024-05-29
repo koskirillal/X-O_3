@@ -1,10 +1,14 @@
 package com.example.krestnull3;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +39,7 @@ public class GameMainScreen extends AppCompatActivity  {
     private DBHelper2 dbHelper;
     public String fintext = "";
     MediaPlayer mediaPlayer ;
+    //int[] arr =new int[3];
 
 
 
@@ -43,10 +48,16 @@ public class GameMainScreen extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_main_screen);
         krestandNollTable= findViewById(R.id.krestandNollTable);
+
+
         MenuButton=findViewById(R.id.button4);
         RestartButton=findViewById(R.id.button3);
         textView=findViewById(R.id.textView5);
-        textView.setText("Krest is going");
+        if (krestandNollTable.game.curentplayer==1) {
+            textView.setText("Krest is going");
+        }else{
+            textView.setText("Noll is going");
+        }
         arrnames = getIntent().getStringArrayExtra("PlayersNames");
         dbHelper=new DBHelper2(this);
         HistoryButton=findViewById(R.id.button5);
@@ -108,41 +119,15 @@ public class GameMainScreen extends AppCompatActivity  {
     }
 
 
-
 }
+/*
+public ArrayList<Integer> OXpar = new ArrayList<>();
+    public ArrayList<Integer> OYpar = new ArrayList<>();
+    public ArrayList<Integer> XXpar = new ArrayList<>();
+    public ArrayList<Integer> XYpar = new ArrayList<>();
+    public int kolx = 0;
+    public int kolo = 0;
+ */
 
 
 
-
-/*public void read(View view){
-        try {
-            FileInputStream fileInputStream = openFileInput("example.txt");
-            InputStreamReader reader = new InputStreamReader(fileInputStream);
-            BufferedReader bufferedReader= new BufferedReader(reader);
-            StringBuffer stringBuffer = new StringBuffer();
-            String lines="";
-            while ((lines = bufferedReader.readLine()) != null){
-                stringBuffer.append(lines + "\n");
-
-            }
-            fintext += stringBuffer.toString();
-            Log.d("data" , fintext);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-    public void write(View view){
-        String mytext = arrnames[0] + " " + arrnames[1] + " " + textView.getText().toString();
-        try {
-            FileOutputStream fileOutputStream = openFileOutput("example.txt" , MODE_PRIVATE);
-            fileOutputStream.write(mytext.getBytes());
-            fileOutputStream.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-    }*/

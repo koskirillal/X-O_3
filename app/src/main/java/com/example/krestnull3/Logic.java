@@ -19,7 +19,7 @@ public class Logic {
 
 
 
-    private int[][] maintable;
+    public int[][] maintable;
     public String[] arrnames = {"Player1" , "Player2"};
     private TextView textwinner;
     private Button menuButton;
